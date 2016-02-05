@@ -7,20 +7,21 @@
       "metadata": {
         "description": "The name of the Sharepoint farm"
       },
-      "defaultValue": "spfarm"
+      "defaultValue": "edgespfarm"
     },
     "location": {
       "type": "string",
       "metadata": {
         "description": "The region to deploy the resources into"
-      }
+      },
+      "defaultValue": "North Europe"
     },
     "virtualNetworkName": {
       "type": "string",
       "metadata": {
         "description": "The name of the Virtual Network to Create"
       },
-      "defaultValue": "spfarmVNET"
+      "defaultValue": "EdgeDemosVNET"
     },
     "virtualNetworkAddressRange": {
       "type": "string",
@@ -62,12 +63,14 @@
       "metadata": {
         "description": "The name of the Administrator of the new VM and Domain"
       }
+      "defaultValue": "it.admin"
     },
     "adminPassword": {
       "type": "securestring",
       "metadata": {
         "description": "The password forthe Administrator account of the new VM and Domain"
       }
+      
     },
     "adVMSize": {
       "type": "string",
@@ -88,14 +91,14 @@
       "metadata": {
         "description": "The size of the VM Created"
       },
-      "defaultValue": "Standard_DS3"
+      "defaultValue": "Standard_DS2"
     },
     "domainName": {
       "type": "string",
       "metadata": {
         "description": "The FQDN of the AD Domain created "
       },
-      "defaultValue": "contoso.local"
+      "defaultValue": "edgedemos.com"
     },
     "sqlServerServiceAccountUserName": {
       "type": "string",
@@ -161,7 +164,7 @@
         "artifactsBaseUrl": "",
         "description": "URL to acquire other templates"
       },
-      "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sharepoint-three-vm"
+      "defaultValue": "https://raw.githubusercontent.com/itech5/azure-quickstart-templates/master/sharepoint-three-vm"
     },
     "spPublicIPNewOrExisting": {
       "type": "string",
@@ -202,7 +205,7 @@
       "metadata": {
         "description": "The type of the Storage Account created"
       },
-      "defaultValue": "Premium_LRS"
+      "defaultValue": "Standard_LRS"
     }
   },
   "variables": {
